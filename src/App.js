@@ -1,26 +1,72 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import HomeContainer from './HomeContainer'
+import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'; //make sure u install npm install react-router-dom
 
-function App() {
+// import {
+//   BrowserRouter as Router,
+//   Switch, //importing the Link Switch and the Route form the library
+//   Route
+// } from "react-router-dom";
+
+
+
+class App extends React.Component{
+
+
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+          <nav>
+              
+              <ul className="topnav">
+                <li className="bottomnav">
+                  <a className="active" href="/home">Home</a>
+                </li>
+
+                <li className="bottomnav">
+                  <a href="/coaches">Coaches</a>
+                </li>
+
+                <li className="bottomnav">
+                  <a href="/contact">Contact</a>
+                </li>
+
+                <li className="bottomnav">
+                  <a href="/sessions">Sessions</a>
+                </li>
+
+                <li className="bottomnav">
+                  <a href="/profile">Profile</a>
+                </li>
+
+                <li className="bottomnav">
+                  <a href="/faq">FAQ</a>
+                </li>
+
+                <li className="bottomnav">
+                  <a href="/register">Register</a>
+                </li>
+              </ul>
+          </nav>
+
+          <Switch>
+
+            <Route exact path="/coaches"/>
+            <Route exact path="/contact"/>
+            <Route exact path="/sessions"/>
+            <Route exact path="/profile"/>
+            <Route exact path="/faq"/>
+            <Route exact path="/register"/>
+
+            <Route exact path="/home" component={HomeContainer}/>
+
+          </Switch>
+      </div>
+    </Router>
   );
+  }
 }
 
 export default App;
