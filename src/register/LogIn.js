@@ -10,50 +10,10 @@ class LogIn extends React.Component{
         return(
 <>
 {/* ===================================================== LogIn ================================================================= */}
-{/* <div class="loginBox">
-		
-		<img src="" class="user" alt="."/>
-		<h2 class="log-here">Log In Here</h2>
-		<form>
-			<p class="p-here">Email</p>
-			<input type="text" name = "" placeholder="Enter Email"/>
-			<p class="p-here">Password</p>
-			<input type="password" name = "" placeholder="Enter Password"/>
-			<input type="submit" name = "" value="sign In"/>
-			<a href="."> Forget Password</a> 
-			
-		</form>
-	</div> */}
+
 
 {/* ========================================================================================================================= */}
-{/* <section class="login-block-new">
-    <div class="container" id="login-container">
-        <div class="row">
-            <div class="col-md-4 login-sec">
-                <h2 class="text-center">Login Now</h2>
-                    <form class="login-form">
-                            <div class="form-group">
-                                <label htmlFor="exampleInputEmail1" class="text-uppercase">Username</label>
-                                <input type="text" class="form-control" placeholder=""/>
-                                
-                            </div>
-                            <div class="form-group">
-                                <label htmlFor="exampleInputPassword1" class="text-uppercase">Password</label>
-                                <input type="password" class="form-control" placeholder=""/>
-                            </div>
-                            
-                            
-                                <div class="form-check">
-                                <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input"/>
-                                <small>Remember Me</small>
-                                </label>
-                                <button type="submit" class="btn btn-login float-right">Submit</button>
-                            </div>
-                        <div class="copy-text">Created with <i class="fa fa-heart"></i> by <a href="http://grafreez.com">Grafreez.com</a></div>
-                    </form> */}
-		
-                    {/* ============= */}
+
 <section class="login-block-new">
     <div class="container" id="login-container">
     <div class="row">
