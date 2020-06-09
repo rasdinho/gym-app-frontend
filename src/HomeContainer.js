@@ -24,17 +24,14 @@ class HomeContainer extends React.Component{
                     <div className="carousel-caption">
                         <h1 className="display-2">WELCOME TO YA Gym</h1>
                         <p>Since our opening day back in 2020, our Gym classes have provided an inspiring welcoming for everybody! That makes every attendee feel like they are a part of one big and passionate community! With that in mind, you can always reach our fitness instructors for any kind of assistance.</p>
-                        {/* <button type="button" className="btn btn-outline-light btn-md">Demo</button>
-                        <button type="button" className="btn btn-primary btn-md">blue</button> */}
+                        
 
                     </div>
                 </div>
 
                 <div className="carousel-item">
                     <img className="home-img" src="https://i1.wp.com/wallur.com/wp-content/uploads/2016/12/fitnessf-background-12.jpg?fit=1920%2C1080" alt="."/>
-                    {/* <div className="carousel-caption">
-                    <a href="." class="youtube-button"><span class="fa fa-play"></span></a>
-                    </div> */}
+                    
                 </div>
 
                 <div className="carousel-item">
@@ -90,7 +87,7 @@ class HomeContainer extends React.Component{
 {/* ============================================= Services ============================================================*/}
         <section id="services">
             <h3>Services</h3>
-            <div className="flex container">
+            <div className="flex container" id="other-c">
             <div className="box">
                 <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/swimming-pool-2268391-1888953.png" alt="swim Icon" />
                 <h4>Pilates</h4>

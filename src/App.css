@@ -12,7 +12,7 @@
 /* ====================== */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 
-/* start: global styles */
+
 * {
   outline: none;
 }
@@ -99,11 +99,11 @@ section, footer {
   text-align: center;
 }
 
-.container {
+/* .container {
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
-}
+} */
 
 .flex {
   display: flex;
@@ -243,9 +243,7 @@ header nav ul li a {
 #hero-slider .slick-dots li.slick-active button:before {
   border-color: #fff;
 }
-/* end: hero section styles */
 
-/* start: features section styles */
 #features .box {
   width: 31%;
 }
@@ -273,14 +271,12 @@ header nav ul li a {
 #features .box .icon img {
   vertical-align: middle;
 }
-/* end: features section styles */
 
-/* start: services section styles */
 #services {
   background: #212122;
 }
 
-#services .container {
+#services #other-c {
   margin-bottom: 4rem;
 }
 
@@ -296,10 +292,8 @@ header nav ul li a {
 #services .box h4 {
   color: #fff;
 }
-/* end: services section styles */
-
-/* start: trainers section styles */
-#trainers {
+/* ====================================================================================== */
+/* #trainers {
   background: url('https://onclickwebdesign.com/wp-content/uploads/trainer-bg.jpg') top center no-repeat;
   background-size: cover;
 }
@@ -338,11 +332,11 @@ header nav ul li a {
 #trainers-slider .slick-prev:before,
 #trainers-slider .slick-next:before {
   font-size: 40px;
-}
+} */
 /* end: trainers section styles */
-
+/* ======================================================================== */
 /* start: schedule services styles */
-#schedule-services {
+/* #schedule-services {
   text-align: left;
 }
 
@@ -427,7 +421,7 @@ header nav ul li a {
 
 #schedule-services .personal-trainer-box strong {
   color: #fff;
-}
+} */
 /* end: schedule services styles */
 
 /* start: footer section styles */
@@ -513,7 +507,7 @@ footer small a {
 /* end: footer section styles */
 
 /* start: search and embed video overlay styles */
-#search-container,
+/* #search-container,
 #video-frame {
   background: #073B4C;
   position: fixed;
@@ -596,11 +590,11 @@ footer small a {
   top: 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
+} */
 /* end: search and embed video overlay styles */
 
 /* start: media queries */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   h2 {
     font-size: 6rem;
   }
@@ -674,7 +668,7 @@ footer small a {
       justify-content: space-between;
       align-items: center;
       position: static;
-    }
+    } 
     
     #header-logo-mobile {
       display: inline-block;
@@ -793,7 +787,7 @@ footer small a {
       margin-top: 1rem;
     }
   }
-}
+} */
 /* end: media queries */
 /* =============================================section4 gallery ============================================================================== */
 .whole-gallery{
@@ -1017,4 +1011,142 @@ background: rgba(0, 0, 0, 0.8);
 }
 
 
-/* ===================================== */
+/* ==================================================== coach page ======================================================= */
+#this-top{
+  padding-top: 5%;
+}
+#vid-left{
+  float: right;
+}
+
+#user-name{
+  float: 30%;
+}
+/* ================================================ */
+#team {
+  background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #108d6f;
+  border-color: #108d6f;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007b5e;
+  border-color: #007b5e;
+}
+
+section {
+  padding: 60px 0;
+}
+
+section .section-title {
+  text-align: center;
+  color: #007b5e;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#team .card {
+  border: none;
+  background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+.backside .card a {
+  font-size: 18px;
+  color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+/* ==================================================== ======================================================= */
