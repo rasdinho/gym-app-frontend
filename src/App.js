@@ -4,6 +4,7 @@ import HomeContainer from './HomeContainer'
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'; //make sure u install npm install react-router-dom
 
 import LogIn from './register/LogIn'
+import SingUp from './register/SignUp'
 import CoachesContainer from './coaches/CoachesContainer'
 
 
@@ -105,7 +106,7 @@ class App extends React.Component{
             <Route exact path="/sessions"/>
             <Route exact path="/profile"/>
             <Route exact path="/faq"/>
-            <Route exact path="/Sign Up"/>
+            <Route exact path="/Sign Up" render={() => <SingUp/>}/>
             <Route exact path="/LogIn" render={() => <LogIn />}/>
 
             <Route exact path="/home" component={HomeContainer}/>

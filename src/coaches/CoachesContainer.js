@@ -56,7 +56,7 @@ componentDidMount(){
         <h7 className="section-title h1">OUR TEAM</h7>
         <hr className="divider bg-danger hr-md-left-0"/>
 
-        <div class="row">
+        <div className="row">
              
             
 
