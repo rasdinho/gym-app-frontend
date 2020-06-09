@@ -1149,4 +1149,21 @@ section .section-title {
   height: 120px;
   border-radius: 50%;
 }
-/* ==================================================== ======================================================= */
+#specialty{
+  color:red
+}
+/* ====================================================sign out icon ======================================================= */
+#sign-out-icon{
+  cursor: pointer;
+  color:red
+}
+#sign-out-btn{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  
+}
+/* =========================================================================================================== */

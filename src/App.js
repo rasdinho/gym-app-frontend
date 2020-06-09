@@ -14,7 +14,7 @@ class App extends React.Component{
   constructor(){
     super()
     this.state = {
-        currentUser: {},
+        currentUser: null,
     }
   }
  
@@ -34,12 +34,18 @@ class App extends React.Component{
       console.log("No one is logged in")
     }
   }
+
   updateCurrentUser = (user) => {
     this.setState({currentUser: user})
-
   }
-
-
+// ========================================= sign out ==================================
+clearStorage = () => {
+  localStorage.clear()
+  this.setState({
+    currentUser:null
+  })
+}
+// =======================================================================================
   render(){
   return (
     <Router>
@@ -52,10 +58,22 @@ class App extends React.Component{
             <button type="button" className="navbar-toggler"  data-toggle="collapse" data-target="#navbarResponsive"><span className="navbar-toggler-icon"></span></button>
             <div className="collapse navbar-collapse" id="navbarResponsive">
               {/* ========= */}
-              <div id="user-name">
-                <p>Hi, {this.state.currentUser ? this.state.currentUser.name : "null"}</p>
-              </div>
+              {/* <div id="user-name">
                 
+                <p>Hi, {this.state.currentUser ? this.state.currentUser.name : "null"} <a href="/home"><i className='fas fa-sign-out-alt' id="sign-out-icon" onClick={() => localStorage.clear()}></i></a></p>
+                
+              </div> */}
+             {/* ==============================after log in== my way======== */}
+
+               {this.state.currentUser ? 
+
+                <div id="user-name">
+                <p>Hi, {this.state.currentUser.name} <button id="sign-out-btn" onClick= {this.clearStorage}><i className='fas fa-sign-out-alt' id="sign-out-icon"></i></button></p>
+                </div>
+              : 
+              ""
+              } 
+
                 {/* ========== */}
                 <ul className="navbar-nav ml-auto">
 
@@ -106,7 +124,7 @@ class App extends React.Component{
             <Route exact path="/sessions"/>
             <Route exact path="/profile"/>
             <Route exact path="/faq"/>
-            <Route exact path="/Sign Up" render={() => <SingUp/>}/>
+            <Route exact path="/Sign Up" render={() => <SingUp updateCurrentUser={this.updateCurrentUser}/>}/>
             <Route exact path="/LogIn" render={() => <LogIn />}/>
 
             <Route exact path="/home" component={HomeContainer}/>

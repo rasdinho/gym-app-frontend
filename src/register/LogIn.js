@@ -54,6 +54,7 @@ class LogIn extends React.Component{
     <div className="row">
         <div className="col-md-4 login-sec">
             <h2 className="text-center">Login Now</h2>
+            {/* ===========================================form ============================= */}
             <form className="login-form" onSubmit={this.handleLoginSubmit} >
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1" className="text-uppercase">Username</label>
@@ -74,7 +75,7 @@ class LogIn extends React.Component{
                             <button type="submit" className="btn btn-login float-right">Submit</button>
                         </div>
             </form>
-
+{/* ================================================================= */}
 <div className="copy-text">Created with <i className="fa fa-heart"></i> by <a href="https://www.google.com">Junior</a></div>
         </div>
         <div className="col-md-8 banner-sec">

@@ -222,7 +222,7 @@ class HomeContainer extends React.Component{
 {/* ============================================= footer ============================================================*/}
 <footer>
     <div className="footer-container">
-      <div id="footer-logo" class="top-gym-logo">
+      <div id="footer-logo" className="top-gym-logo">
         <a href="/home"><img src="https://i.pinimg.com/originals/3e/c6/f3/3ec6f3910ccd0d507bb8bb7d6b2c2da3.png" className="logo" alt="."/></a>
       </div>
 
