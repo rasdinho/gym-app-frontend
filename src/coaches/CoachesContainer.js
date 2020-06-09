@@ -56,7 +56,7 @@ componentDidMount(){
         <h7 className="section-title h1">OUR TEAM</h7>
         <hr className="divider bg-danger hr-md-left-0"/>
 
-        {/* <div class="row"> */}
+        <div class="row">
                 {/* <div class="col-xs-12 col-sm-6 col-md-4"> */}
             
 
@@ -64,9 +64,9 @@ componentDidMount(){
                      {this.state.allCoaches.map(c => <Coach coach={c} key={c.id}/>)}
               
           
-                               
-                {/* </div>   */}
-            {/* </div>  */}
+{/*                                
+                </div>   */}
+            </div> 
 
     </div>
 </section> 
