@@ -57,15 +57,13 @@ componentDidMount(){
         <hr className="divider bg-danger hr-md-left-0"/>
 
         <div class="row">
-                {/* <div class="col-xs-12 col-sm-6 col-md-4"> */}
+             
             
 
           
                      {this.state.allCoaches.map(c => <Coach coach={c} key={c.id}/>)}
               
-          
-{/*                                
-                </div>   */}
+
             </div> 
 
     </div>
