@@ -64,7 +64,7 @@ componentDidMount(){
                      {this.state.allCoaches.map(c => <Coach coach={c} key={c.id}/>)}
               
 
-            </div> 
+        </div> 
 
     </div>
 </section> 

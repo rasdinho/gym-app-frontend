@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import HomeContainer from './HomeContainer'
+import HomeContainer from './HomeContainer';
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'; //make sure u install npm install react-router-dom
 
-import LogIn from './register/LogIn'
-import SingUp from './register/SignUp'
-import CoachesContainer from './coaches/CoachesContainer'
+import LogIn from './register/LogIn';
+import SingUp from './register/SignUp';
+import CoachesContainer from './coaches/CoachesContainer';
+import SessionsContainer from '../src/Sessions/SessionsContainer'
 
 
 
@@ -121,7 +122,7 @@ clearStorage = () => {
 
             <Route exact path="/coaches" render={() => <CoachesContainer/>}/>
             <Route exact path="/contact"/>
-            <Route exact path="/sessions"/>
+            <Route exact path="/sessions" render={() => <SessionsContainer/>}/>
             <Route exact path="/profile"/>
             <Route exact path="/faq"/>
             <Route exact path="/Sign Up" render={() => <SingUp updateCurrentUser={this.updateCurrentUser}/>}/>
