@@ -32,11 +32,10 @@ class LogIn extends React.Component{
           console.log("response from the server", userData)
           if(userData.error_message){
             alert(userData.error_message)
-          }else{
-             
+          }else{    
             localStorage.setItem("token", userData.token)
             localStorage.setItem("userId", userData.user_data.id)   //added this to store current user 
-            // this.props.updateCurrentUser(userData.user_data)   
+            this.props.updateCurrentUser(userData.user_data)   
           }
         })
     }

@@ -33,7 +33,7 @@ componentDidMount(){
 
             <div id="ul-div">
                     <ul className="row" id="ul-new">
-                        {this.state.sessions.map(s => <Session session={s} key={s.id}/>)}
+                        {this.state.sessions.map(s => <Session session={s} key={s.id} user={this.props.user}/>)}
                     </ul>
             </div>
     </div>

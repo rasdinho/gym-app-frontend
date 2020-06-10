@@ -50,11 +50,11 @@ render(){
         return(
 <>
 <section id="bbb">
-  <div class="container" id="ccc">
-    <div class="wrap" id="wrapp">
-    <h1 class="text-center" id="logoo">SIGN UP</h1>
+  <div className="container" id="ccc">
+    <div className="wrap" id="wrapp">
+    <h1 className="text-center" id="logoo">SIGN UP</h1>
 
-    <form id="loginn" class="text-center">
+    <form id="loginn" className="text-center">
 
       <input type="name" placeholder="FULL NAME" id="emailll" name="name" value={this.state.name} onChange={this.handleChange} />
 
@@ -66,7 +66,7 @@ render(){
 
     </form>
     <a href="/home" onClick={this.handleLoginSubmit} class="registerrr">Register</a>
-    <a href="." class="login-linkkk">Already a memeber? Log in</a>
+    <a href="/login" className="login-linkkk">Already a memeber? Log in</a>
   </div>
   </div>
 </section>

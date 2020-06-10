@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
 import HomeContainer from './HomeContainer';
-import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'; //make sure u install npm install react-router-dom
+import { BrowserRouter as Router, Route,Switch, Redirect } from 'react-router-dom'; //make sure u install npm install react-router-dom
 
 import LogIn from './register/LogIn';
 import SingUp from './register/SignUp';
 import CoachesContainer from './coaches/CoachesContainer';
-import SessionsContainer from '../src/Sessions/SessionsContainer'
+import SessionsContainer from '../src/Sessions/SessionsContainer';
+import Profile from '../src/profile/Profile'
 
 
 
@@ -48,6 +49,7 @@ clearStorage = () => {
 }
 // =======================================================================================
   render(){
+    console.log(this.state.currentUser)
   return (
     <Router>
       <div className="App">
@@ -122,11 +124,15 @@ clearStorage = () => {
 
             <Route exact path="/coaches" render={() => <CoachesContainer/>}/>
             <Route exact path="/contact"/>
-            <Route exact path="/sessions" render={() => <SessionsContainer/>}/>
-            <Route exact path="/profile"/>
+            <Route exact path="/sessions" render={() => <SessionsContainer user = {this.state.currentUser}/>}/>
+
+            <Route exact path="/profile"> {this.state.currentUser ? <Profile user={this.state.currentUser}/> : <Redirect to="/LogIn"/> }
+              </Route>
+
             <Route exact path="/faq"/>
             <Route exact path="/Sign Up" render={() => <SingUp updateCurrentUser={this.updateCurrentUser}/>}/>
-            <Route exact path="/LogIn" render={() => <LogIn />}/>
+
+            <Route exact path="/LogIn"> {this.state.currentUser ? <Redirect to = "/profile"/> : <LogIn updateCurrentUser={this.updateCurrentUser}/>}</Route>
 
             <Route exact path="/home" component={HomeContainer}/>
 
