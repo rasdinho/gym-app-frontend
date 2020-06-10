@@ -7,7 +7,7 @@ class Session extends React.Component{
 
 
     render(){
-        console.log("s", this.props.session)
+      
         return(
 <>
 {/* ====================================================== */}
@@ -15,14 +15,14 @@ class Session extends React.Component{
 
 <li className="col-12 col-md-6 col-lg-3">
           <div className="cnt-block equal-hight" id="style-prop">
-            <figure><img src="http://www.webcoderskull.com/img/team4.png" className="img-responsive" alt=""/></figure>
-            <h3><a href="http://www.webcoderskull.com/">Web coder skull</a></h3>
-            <p>Freelance Web Developer</p>
+            <figure><img src={this.props.session.img} className="img-responsive" alt="."/></figure>
+            <h3>{this.props.session.title}</h3>
+            <p>{this.props.session.date_time}</p>
+            <p>{this.props.session.duration}</p>
+            <p>{this.props.session.coach_id}</p>
             <button className="button3">Join</button>
           </div>
       </li>  
-
-
 {/* ========================================================== */}
 </>
         )
