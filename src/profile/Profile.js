@@ -24,7 +24,9 @@ class Profile extends React.Component{
   <h2 id="h2pro">{this.props.user.name}</h2>
   <h4 id="h4pro">{this.props.user.email}</h4>
 
-<p>{this.props.user.sessions.map((s, index) =>  <div key={index}> {s.title} {s.date}</div>)}</p>
+<p>{this.props.user.sessions.map((s, index) =>  <div key={index}> {s.title} <button type="button" className="close" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button></div>)} </p>
   
 </div>
  </div>
