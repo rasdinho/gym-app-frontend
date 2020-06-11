@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import swal from 'sweetalert'
 
 
 
@@ -38,6 +39,12 @@ class LogIn extends React.Component{
             this.props.updateCurrentUser(userData.user_data)   
           }
         })
+        swal({
+            title: "Successfully logged in!",
+            // text: "You clicked the button!",
+            icon: "success",
+            button: "See Profile!",
+          });
     }
 
     render(){

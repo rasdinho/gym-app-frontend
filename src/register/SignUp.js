@@ -1,4 +1,5 @@
 import React from 'react';
+// import swal from 'sweetalert';
 import './SignUp.css'
 
 
@@ -38,6 +39,7 @@ class SingUp extends React.Component{
           }
         })
         console.log("attempting to log in")
+      
       };
 
 
