@@ -65,7 +65,7 @@ render(){
       <input type="password" placeholder="PASSWORD" id="passworddd" name="password" value={this.state.password} onChange={this.handleChange} />
 
     </form>
-    <a href="/home" onClick={this.handleLoginSubmit} class="registerrr">Register</a>
+    <a href="/home" onClick={this.handleLoginSubmit} className="registerrr">Register</a>
     <a href="/login" className="login-linkkk">Already a memeber? Log in</a>
   </div>
   </div>

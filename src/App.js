@@ -130,7 +130,7 @@ clearStorage = () => {
               </Route>
 
             <Route exact path="/faq"/>
-            <Route exact path="/Sign Up" render={() => <SingUp updateCurrentUser={this.updateCurrentUser}/>}/>
+            <Route exact path="/Sign Up" render={() => (this.state.currentUser ? <Redirect to = "/profile"/> : <SingUp updateCurrentUser={this.updateCurrentUser} />)  }/>
 
             <Route exact path="/LogIn"> {this.state.currentUser ? <Redirect to = "/profile"/> : <LogIn updateCurrentUser={this.updateCurrentUser}/>}</Route>
 
