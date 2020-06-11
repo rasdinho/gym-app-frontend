@@ -1,20 +1,26 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Sessions.css'
 
 
 
+toast.configure()
 class Session extends React.Component{
 
-
+    // notify = () =>{
+    //     toast("This call is added to your profile")
+    // }
 
     handleJoin = () => {
-       // console.log(this.props.session.id, this.props.user.id)
         fetch("http://localhost:3000/registrations", {
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({session_id: this.props.session.id, user_id: this.props.user.id})
         }).then(resp => resp.json())
         .then(data => console.log(data.title))
+
+        toast("This call is added to your profile") //this is just to add an alert when u join a session
     }
 
     render(){

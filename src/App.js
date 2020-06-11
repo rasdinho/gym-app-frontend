@@ -123,7 +123,7 @@ clearStorage = () => {
           <Switch>
 
             <Route exact path="/coaches" render={() => <CoachesContainer/>}/>
-            
+
             <Route exact path="/contact"/>
 
             <Route exact path="/sessions" render={() => <SessionsContainer user = {this.state.currentUser}/>}/>
@@ -131,7 +131,7 @@ clearStorage = () => {
             <Route exact path="/profile"> {this.state.currentUser ? <Profile user={this.state.currentUser}/> : <Redirect to="/LogIn"/> }</Route>
 
             <Route exact path="/faq"/>
-
+              
             <Route exact path="/Sign Up" render={() => (this.state.currentUser ? <Redirect to = "/profile"/> : <SingUp updateCurrentUser={this.updateCurrentUser} />)  }/>
 
             <Route exact path="/LogIn"> {this.state.currentUser ? <Redirect to = "/profile"/> : <LogIn updateCurrentUser={this.updateCurrentUser}/>}</Route>
