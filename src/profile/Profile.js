@@ -1,4 +1,5 @@
 import React from 'react';
+import swal from 'sweetalert';
 import './Profile.css'
 
 
@@ -11,17 +12,50 @@ class Profile extends React.Component{
   }
 
     handleDelete = (id) =>{
-    fetch("http://localhost:3000/deleteRegistrations", {
-        method: 'POST',
-        headers: {"Content-Type":"application/json",
-        'Accept': 'application/json'
-      },
-       body: JSON.stringify({user_id: this.props.user.id, session_id: id})
-    }).then( resp => resp.json()
-         ).then(data => 
-            //console.log(data)
-            this.setState({user: data})
-            )
+        //=============================  this will ask u if u wanna delete u click cancel and it will cancel thats why ur fetch call is under if statement
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+                fetch("http://localhost:3000/deleteRegistrations", {
+                    method: 'POST',
+                    headers: {"Content-Type":"application/json",
+                    'Accept': 'application/json'
+                  },
+                   body: JSON.stringify({user_id: this.props.user.id, session_id: id})
+                }).then( resp => resp.json()
+                     ).then(data => 
+                        //console.log(data)
+                        this.setState({user: data})
+                        )
+                        //swal("This session was deleted.") //3 step add ur alert(swal no need import swal from 'sweetalert';)
+                        
+              swal("Poof! Your imaginary file has been deleted!", {
+                icon: "success",
+              });
+            } else {
+              swal("Your imaginary file is safe!");
+            }
+          });
+        //=====================
+    // fetch("http://localhost:3000/deleteRegistrations", {
+    //     method: 'POST',
+    //     headers: {"Content-Type":"application/json",
+    //     'Accept': 'application/json'
+    //   },
+    //    body: JSON.stringify({user_id: this.props.user.id, session_id: id})
+    // }).then( resp => resp.json()
+    //      ).then(data => 
+    //         //console.log(data)
+    //         this.setState({user: data})
+    //         )
+    //         //swal("This session was deleted.") //3 step add ur alert(swal no need import swal from 'sweetalert';)
+            
     }
 
 

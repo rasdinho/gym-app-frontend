@@ -4,8 +4,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Sessions.css'
 
 
+//npm install --save react-toastify install this in the console first then(import in the file u gonna use it at { toast } from 'react-toastify'; import 'react-toastify/dist/ReactToastify.css';)
 
-toast.configure()
+toast.configure() // second step add this
 class Session extends React.Component{
 
     // notify = () =>{
@@ -20,7 +21,7 @@ class Session extends React.Component{
         }).then(resp => resp.json())
         .then(data => console.log(data.title))
 
-        toast("This call is added to your profile") //this is just to add an alert when u join a session
+        toast("Session is added to your profile") // 3 this is just to add an alert when u join a session
     }
 
     render(){
