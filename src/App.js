@@ -7,7 +7,8 @@ import LogIn from './register/LogIn';
 import SingUp from './register/SignUp';
 import CoachesContainer from './coaches/CoachesContainer';
 import SessionsContainer from '../src/Sessions/SessionsContainer';
-import Profile from '../src/profile/Profile'
+// import Profile from '../src/profile/Profile'
+import ProfileContainer from './profile/ProfileContainer'
 
 
 
@@ -17,6 +18,7 @@ class App extends React.Component{
     super()
     this.state = {
         currentUser: null,
+       
     }
   }
  
@@ -47,9 +49,16 @@ clearStorage = () => {
     currentUser:null
   })
 }
+// =========================================== edit user============================================
+  updateUser = (updatedUser) => {
+    this.setState({currentUser: updatedUser})
+  }
+  
 // =======================================================================================
+
   render(){
-    console.log(this.state.currentUser)
+    //console.log("updatedUser",this.state.currentUser)
+    
   return (
     <Router>
       <div className="App">
@@ -128,7 +137,11 @@ clearStorage = () => {
 
             <Route exact path="/sessions" render={() => <SessionsContainer user = {this.state.currentUser}/>}/>
 
-            <Route exact path="/profile"> {this.state.currentUser ? <Profile user={this.state.currentUser}/> : <Redirect to="/LogIn"/> }</Route>
+            {/* <Route exact path="/profile"> {this.state.currentUser ? <Profile user={this.state.currentUser} editProfile={this.editProfile}/> : <Redirect to="/LogIn"/> }</Route> */}
+
+            <Route exact path="/profile"> {this.state.currentUser ? <ProfileContainer user={this.state.currentUser} updateUser={this.updateUser}/> : <Redirect to="/LogIn"/> }</Route>
+
+
 
             <Route exact path="/faq"/>
               
