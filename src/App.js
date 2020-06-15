@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
 import HomeContainer from './HomeContainer';
-import { BrowserRouter as Router, Route,Switch, Redirect } from 'react-router-dom'; //make sure u install npm install react-router-dom
+import { BrowserRouter as Router, Route,Switch, Redirect} from 'react-router-dom'; //make sure u install npm install react-router-dom
 
 import LogIn from './register/LogIn';
 import SingUp from './register/SignUp';
 import CoachesContainer from './coaches/CoachesContainer';
 import SessionsContainer from '../src/Sessions/SessionsContainer';
 // import Profile from '../src/profile/Profile'
-import ProfileContainer from './profile/ProfileContainer'
+import ProfileContainer from './profile/ProfileContainer';
+import CoachReview from './coaches/CoachReview'
 
 
 
@@ -77,7 +78,7 @@ clearStorage = () => {
               </div> */}
              {/* ==============================after log in== my way======== */}
 
-               {this.state.currentUser ? 
+              {this.state.currentUser ? 
 
                 <div id="user-name">
                 <p>Hi, {this.state.currentUser.name} <button id="sign-out-btn" onClick= {this.clearStorage}><i className='fas fa-sign-out-alt' id="sign-out-icon"></i></button></p>
@@ -101,10 +102,18 @@ clearStorage = () => {
 
                     <li className="nav-item"><a className="nav-link" href="/faq">FAQ</a></li>
 
+{/* ===================================== */}
+                  {!this.state.currentUser ?
                     <li className="nav-item"><a className="nav-link" href="/Sign Up">Sign Up</a></li>
+                    :
+                    null
+                    }
 
+                  {!this.state.currentUser ?
                     <li className="nav-item"><a className="nav-link" href="/LogIn">LogIn</a></li>
-                 
+                    :
+                    null
+                    }
                     {/* ======= */}
                 
                     {/* === */}
@@ -131,7 +140,7 @@ clearStorage = () => {
 
           <Switch>
 
-            <Route exact path="/coaches" render={() => <CoachesContainer/>}/>
+            <Route exact path="/coaches" render={() => <CoachesContainer user = {this.state.currentUser}/>}/>
 
             <Route exact path="/contact"/>
 
@@ -140,7 +149,7 @@ clearStorage = () => {
             {/* <Route exact path="/profile"> {this.state.currentUser ? <Profile user={this.state.currentUser} editProfile={this.editProfile}/> : <Redirect to="/LogIn"/> }</Route> */}
 
             <Route exact path="/profile"> {this.state.currentUser ? <ProfileContainer user={this.state.currentUser} updateUser={this.updateUser}/> : <Redirect to="/LogIn"/> }</Route>
-
+            
 
 
             <Route exact path="/faq"/>
@@ -151,6 +160,8 @@ clearStorage = () => {
 
             <Route exact path="/home" component={HomeContainer}/>
 
+            <Route exact path="/coaches/:id" render={(props) => {return <CoachReview {...props} userReview={this.state.currentUser}/>}} />
+            
           </Switch>
       </div>
     </Router>

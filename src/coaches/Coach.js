@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom'
 
 
 class Coach extends React.Component{
     
     render(){
+        const {coach, user} = this.props 
         return(
 <>
 
@@ -15,9 +17,9 @@ class Coach extends React.Component{
                         <div className="frontside">
                             <div className="card">
                                 <div className="card-body text-center">
-                                    <p><img className=" img-fluid" src={this.props.coach.img} alt="cardImage"/></p>
-                                    <h4 className="card-title">{this.props.coach.name}</h4>
-                                    <p className="card-text">{this.props.coach.specialty}</p>
+                                    <p><img className=" img-fluid" src={coach.img} alt="cardImage"/></p>
+                                    <h4 className="card-title">{coach.name}</h4>
+                                    <p className="card-text">{coach.specialty}</p>
                                     <a href="." className="btn btn-primary btn-sm"><i className="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -25,8 +27,14 @@ class Coach extends React.Component{
                         <div className="backside">
                             <div className="card">
                                 <div className="card-body text-center mt-4">
-                                    <h4 className="card-title">{this.props.coach.name}</h4>
-                                    <p className="card-text">{this.props.coach.bio}</p>
+                                    <h4 className="card-title">{coach.name}</h4>
+                                    <p className="card-text">{coach.bio}</p>
+
+                                    {user ?
+                                    <Link to={`/coaches/${coach.id}`}>
+                                    <button id="review-coach-btn">Reviews</button>
+                                    </Link> : null }
+<hr />
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <a className="social-icon text-xs-center" target="blank" href=".">

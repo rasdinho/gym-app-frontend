@@ -61,7 +61,7 @@ componentDidMount(){
             
 
           
-                     {this.state.allCoaches.map(c => <Coach coach={c} key={c.id}/>)}
+                     {this.state.allCoaches.map(c => <Coach coach={c} key={c.id} user={this.props.user}/>)}
               
 
         </div> 

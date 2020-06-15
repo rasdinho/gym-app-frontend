@@ -38,9 +38,12 @@ class Session extends React.Component{
             <p>{this.props.session.duration}</p>
             <p>{this.props.session.coach.name}</p>
 
-            {this.props.user &&
+            {/* {this.props.user &&
             <button className="button3" onClick={this.handleJoin}>Join</button>
-            }
+            } */}
+
+            {this.props.user ? <button className="button3" onClick={this.handleJoin}>Join</button> : null}
+            
           </div>
       </li>  
 {/* ========================================================== */}
