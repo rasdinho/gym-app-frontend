@@ -143,7 +143,7 @@ clearStorage = () => {
 
             <Route exact path="/coaches" render={() => <CoachesContainer user = {this.state.currentUser}/>}/>
 
-            <Route exact path="/contact" rcomponent={ContactUs}/>
+            <Route exact path="/contact" component={ContactUs}/>
 
             <Route exact path="/sessions" render={() => <SessionsContainer user = {this.state.currentUser}/>}/>
 
