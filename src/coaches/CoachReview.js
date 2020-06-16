@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 class CoachReview extends Component {
     state ={
-        coach: null,
+        reviews: [],
         leaveReview: ''
     }
 
     componentDidMount(){
-        fetch(`http://localhost:3000/coaches/${this.props.match.params.id}`)
+        fetch(`http://localhost:3000/reviews/${this.props.match.params.id}`)
         .then(resp => resp.json())
-        .then(coach => {
+        .then(reviews => {
           this.setState({
-            coach: coach
+            reviews: reviews
           })
         })
     }
@@ -26,7 +26,7 @@ class CoachReview extends Component {
         e.preventDefault()
        let review = {
             content: this.state.leaveReview,
-            coach_id: this.state.coach.id,
+            coach_id: this.props.match.params.id,
             user_id: this.props.userReview.id //this comes from app.js so we know the user who comment on the coach
         }
 
@@ -39,11 +39,10 @@ class CoachReview extends Component {
         }
         ).then(resp => resp.json())
         .then(newReview => {
+            newReview.user = this.props.userReview
             this.setState({
-                coach: {
-                    ...this.state.coach, //this array we wanna put reviews in it
-                    reviews: [...this.state.coach.reviews, newReview]
-                } 
+                reviews: [...this.state.reviews, newReview],
+                leaveReview: ''
             })
         })
 
@@ -53,11 +52,12 @@ class CoachReview extends Component {
         // const  rev = this.state.coach.reviews.map(r => r.content)
         return (
 <>
-            {!this.state.coach ? null : 
+            {!this.state.reviews[0] ? null : 
 
 <div>
-        <h1>{this.state.coach.name}</h1>
-        <ul>{this.state.coach.reviews.map(r => <li>{r.content}</li>)}
+        <h1>{this.state.reviews[0].coach.name}</h1>
+        
+            <ul>{this.state.reviews.map(r => <li>{r.content} => writing by <small>{r.user ? r.user.name : null}</small></li>)}
         </ul>
             
 

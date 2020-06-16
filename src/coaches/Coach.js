@@ -33,7 +33,7 @@ class Coach extends React.Component{
                                     {user ?
                                     <Link to={`/coaches/${coach.id}`}>
                                     <button id="review-coach-btn">Reviews</button>
-                                    </Link> : null }
+                                    </Link> : null}
 <hr />
                                     <ul className="list-inline">
                                         <li className="list-inline-item">

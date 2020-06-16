@@ -9,7 +9,8 @@ import CoachesContainer from './coaches/CoachesContainer';
 import SessionsContainer from '../src/Sessions/SessionsContainer';
 // import Profile from '../src/profile/Profile'
 import ProfileContainer from './profile/ProfileContainer';
-import CoachReview from './coaches/CoachReview'
+import CoachReview from './coaches/CoachReview';
+import ContactUs from  './ContactUs'
 
 
 
@@ -142,7 +143,7 @@ clearStorage = () => {
 
             <Route exact path="/coaches" render={() => <CoachesContainer user = {this.state.currentUser}/>}/>
 
-            <Route exact path="/contact"/>
+            <Route exact path="/contact" rcomponent={ContactUs}/>
 
             <Route exact path="/sessions" render={() => <SessionsContainer user = {this.state.currentUser}/>}/>
 
@@ -160,7 +161,10 @@ clearStorage = () => {
 
             <Route exact path="/home" component={HomeContainer}/>
 
-            <Route exact path="/coaches/:id" render={(props) => {return <CoachReview {...props} userReview={this.state.currentUser}/>}} />
+            {/* <Route exact path="/coaches/:id" render={(props) => {return <CoachReview {...props} userReview={this.state.currentUser} />}} /> */}
+
+            <Route exact path="/coaches/:id" render={(props) => {return !this.state.currentUser ? <Redirect to="/LogIn"/> : <CoachReview {...props} userReview={this.state.currentUser} />}} />
+
             
           </Switch>
       </div>
