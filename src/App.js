@@ -10,7 +10,8 @@ import SessionsContainer from '../src/Sessions/SessionsContainer';
 // import Profile from '../src/profile/Profile'
 import ProfileContainer from './profile/ProfileContainer';
 import CoachReview from './coaches/CoachReview';
-import ContactUs from  './ContactUs'
+import ContactUs from  './ContactUs';
+import Faqs from './Faqs'
 
 
 
@@ -153,7 +154,7 @@ clearStorage = () => {
             
 
 
-            <Route exact path="/faq"/>
+            <Route exact path="/faq" component={Faqs}/>
               
             <Route exact path="/Sign Up" render={() => (this.state.currentUser ? <Redirect to = "/profile"/> : <SingUp updateCurrentUser={this.updateCurrentUser} />)  }/>
 

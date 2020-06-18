@@ -93,7 +93,8 @@ class LogIn extends React.Component{
                   </ol>
             <div className="carousel-inner" role="listbox">
     <div className="carousel-item active">
-      <img className="d-block img-fluid" src="https://img5.goodfon.com/wallpaper/nbig/6/9f/fitness-abs-muscles-sexy.jpg" alt="First slide"/>
+    
+      <img className="d-block img-fluid" src="https://besthqwallpapers.com/Uploads/5-4-2017/15034/thumb2-bodybuilding-barbell-biceps-exercises-fitness.jpg" alt="First slide"/>
       <div className="carousel-caption d-none d-md-block">
         <div className="banner-text">
             <h2 id="h2-login">One Community!</h2>
@@ -102,7 +103,7 @@ class LogIn extends React.Component{
   </div>
     </div>
     <div className="carousel-item">
-      <img className="d-block img-fluid" src="https://besthqwallpapers.com/Uploads/5-4-2017/15034/thumb2-bodybuilding-barbell-biceps-exercises-fitness.jpg" alt="Second slide"/>
+      <img className="d-block img-fluid" src="https://img5.goodfon.com/wallpaper/nbig/6/9f/fitness-abs-muscles-sexy.jpg" alt="Second slide"/>
       <div className="carousel-caption d-none d-md-block">
         <div className="banner-text">
             <h2 id="h2-login">We Got You</h2>

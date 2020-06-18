@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './ReviewCoach.css'
 class CoachReview extends Component {
     state ={
         reviews: [],
@@ -52,7 +52,8 @@ class CoachReview extends Component {
         // const  rev = this.state.coach.reviews.map(r => r.content)
         return (
 <>
-            {!this.state.reviews[0] ? null : 
+{/* ============================================================================================================ */}
+    {!this.state.reviews[0] ? null : 
 
 <div>
         <h1>{this.state.reviews[0].coach.name}</h1>
@@ -60,18 +61,21 @@ class CoachReview extends Component {
             <ul>{this.state.reviews.map(r => <li>{r.content} => writing by <small>{r.user ? r.user.name : null}</small></li>)}
         </ul>
             
+        <form onSubmit={this.handleSubmit}>
+            <div className="form-group">
+                <label htmlFor="exampleInputEmail1">Write a Review</label>
+                <input type="text" className="form-control" aria-describedby="emailHelp" name="leaveReview" value={this.state.leaveReview} onChange={this.handleReview}/>
+            </div>
 
-<form onSubmit={this.handleSubmit}>
-  <div className="form-group">
-    <label htmlFor="exampleInputEmail1">Write a Review</label>
-    <input type="text" className="form-control" aria-describedby="emailHelp" name="leaveReview" value={this.state.leaveReview} onChange={this.handleReview}/>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
        
 </div>
     }
+{/* =============================================try it out=============================================================== */}
+
+
+{/* ============================================================================================================ */}
 
 </>
         );

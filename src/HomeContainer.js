@@ -22,7 +22,7 @@ class HomeContainer extends React.Component{
                 <div className="carousel-item active">
                     <img className="home-img" src="https://askmuscle.com/wp-content/uploads/2019/01/man-woman-isolated-on-dark-background-weight-training-ss-Feature.jpg" alt="."/>
                     <div className="carousel-caption">
-                        <h1 className="display-2">WELCOME TO YA Gym</h1>
+                        <h1 className="display-2">Sweat Box</h1>
                         <p>Since our opening day back in 2020, our Gym classes have provided an inspiring welcoming for everybody! That makes every attendee feel like they are a part of one big and passionate community! With that in mind, you can always reach our fitness instructors for any kind of assistance.</p>
                         
 
@@ -218,6 +218,23 @@ class HomeContainer extends React.Component{
 
                 </div>
             </figure> */}
+    <section id="schedule-services">
+              <div class="flex container">
+                <div class="membership-cards-box">
+                  <div class="inner-container">
+                    <strong>NEXT</strong>
+                    <h4>Membership Deals</h4>
+                    <h2>25% <span>Discount</span></h2>
+                  </div>
+                </div>
+
+                <div class="personal-trainer-box">
+                  <strong>BECOME A</strong>
+                  <h4>Personal Trainer</h4>
+                  <p>Try to reach out to the gym manager for more details. See the contact us page for details on how to reach out to us.</p>    
+                </div>
+              </div>
+  </section>
 
 {/* ============================================= footer ============================================================*/}
 <footer>

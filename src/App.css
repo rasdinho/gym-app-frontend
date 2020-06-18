@@ -38,9 +38,9 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 2px;
 }
 
-h1, h3, h4, h5 {
+/* h1, h3, h4, h5 {
   text-transform: uppercase;
-}
+} */
 
 h2 {
   font-size: 8rem;
@@ -1166,6 +1166,92 @@ section .section-title {
   outline:none;
   
 }
+/* ======================================================== Schedule coach services ======================================== */
+#schedule-services {
+  text-align: left;
+}
+
+#schedule-services .flex > div {
+  width: 32%;
+  box-sizing: border-box;
+}
+
+#schedule-services .flex strong {
+  display: block;
+  color: #212122;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 4px;
+}
+
+.upcoming-classes-box {
+  border: 2px solid #E5E7F3;
+  padding: 4rem 2.5rem 2.5rem;
+}
+
+.upcoming-classes-box h4 {
+  margin-bottom: 2rem;
+}
+
+.upcoming-classes-box table {
+  width: 100%;
+}
+
+.upcoming-classes-box table tr td {
+  padding: 13px 10px 13px 0;
+  color: #7b7b7b;
+  font-size: 0.85rem;
+}
+
+.upcoming-classes-box table tr td:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+
+.membership-cards-box {
+  background: #233EDE;
+  padding: 1.5rem;
+}
+
+.membership-cards-box .inner-container {
+  background: url('https://onclickwebdesign.com/wp-content/uploads/woman-exercise.jpg') top center no-repeat;
+  height: 395px;
+  padding: 2.5rem 1.5rem 1.5rem;
+}
+
+.membership-cards-box h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #233EDE;
+  line-height: 1;
+}
+
+.membership-cards-box h2 span {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.personal-trainer-box {
+  background: url('https://onclickwebdesign.com/wp-content/uploads/personal-trainer.jpg') top center no-repeat;
+  padding: 4rem 3rem 3rem;
+}
+
+.personal-trainer-box h4 {
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.personal-trainer-box p {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+
+
+#schedule-services .personal-trainer-box strong {
+  color: #fff;
+}
+
 /* ======================================================== review coach button =================================================== */
 #review-coach-btn{
   color: red
